@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Guards</title>
+</head>
+<body>
+
+<h2>List of Security Guards</h2>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th>User ID</th>
+    <th>Password</th>
+    <th>Full Name</th>
+    <th>Age</th>
+    <th>Address</th>
+    <th>Salary</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="guard : ${securityGuards}">
+    <td th:text="${guard.user_id}"></td>
+    <td th:text="${guard.passWord}"></td>
+    <td th:text="${guard.fullName}"></td>
+    <td th:text="${guard.age}"></td>
+    <td th:text="${guard.address}"></td>
+    <td th:text="${guard.salary}"></td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
